@@ -10,7 +10,7 @@
    *
    */
   var regexp = [
-    /\W[[a-zA-Z0-9\.-]+]/g,
+    /\W\[.*?\]/g, /* matches: <space>[<anything>] */
   ];
 
   /*
