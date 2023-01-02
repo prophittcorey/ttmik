@@ -1,0 +1,24 @@
+{
+  "name": "TalkToMeInKorean Improved",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "A browser extension that makes subtle improvements to the TTMIK (talktomeinkorean.com) website.",
+  "minimum_chrome_version": "89",
+  "incognito": "spanning",
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://talktomeinkorean.com/*"
+      ],
+      "all_frames": false,
+      "js": [
+        "js/content.js"
+      ]
+    }
+  ]
+}
