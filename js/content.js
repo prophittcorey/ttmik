@@ -1,8 +1,27 @@
 (function() {
   "use strict";
 
-  // NOTE: We only need to do this on levels 1, 2 and 3.
-  // NOTE: Check lessons 5 and 10 for some edge cases with brackets.
+  /*
+   *
+   * We don't need to perform this fix for all levels. It looks like only
+   * levels 1-3 are affected.
+   *
+   */
+  var skippable = true;
+
+  [
+    'curriculum/level-1',
+    'curriculum/level-2',
+    'curriculum/level-3',
+  ].forEach(function (slug) {
+    if (location.href.indexOf(slug) !== -1) {
+      skippable = false;
+    }
+  });
+
+  if (skippable) {
+    return /* this page is outside the affected levels */;
+  }
 
   /*
    *
@@ -36,7 +55,7 @@
   var exceptions = [
     /* special cases for level 1, lesson 5 grammatical explanation */
     function (text, target) {
-      return text && target.trim() == '[be]';
+      return text && target == '[be]';
     },
   ];
 
@@ -64,6 +83,8 @@
         if (!matches) return;
 
         matches.forEach(t => {
+          t = t.trim();
+
           if (isException(text, t)) return;
 
           el.innerHTML = el.innerHTML.replace(t, '');
