@@ -1,6 +1,9 @@
 (function() {
   "use strict";
 
+  // NOTE: We only need to do this on levels 1, 2 and 3.
+  // NOTE: Check lessons 5 and 10 for some edge cases with brackets.
+
   /*
    *
    * We want to find all romanization and replace it with a blank string. In
@@ -24,23 +27,46 @@
     '.tab-content-lesson > p',
   ];
 
+  /*
+   *
+   * Some cases exist where we don't want to remove bracketed info. Mainly, some
+   * grammatical explanations.
+   *
+   */
+  var exceptions = [
+    /* special cases for level 1, lesson 5 grammatical explanation */
+    function (text, target) {
+      return text && target.trim() == '[be]';
+    },
+  ];
+
+  var isException = function (text, target) {
+    var matched = false;
+
+    exceptions.forEach(function (f) {
+      if (f(text, target)) {
+        matched = true;
+      }
+    });
+
+    return matched
+  };
+
   selectors.forEach(function (selector) {
-    regexp.forEach(function (regex) {
-      document.querySelectorAll(selector).forEach(el => {
+    document.querySelectorAll(selector).forEach(el => {
+      regexp.forEach(function (regex) {
         var text = el.innerText;
 
-        if (!text) {
-          return;
-        }
+        if (!text) return;
 
         var matches = text.match(regex);
 
-        if (!matches) {
-          return;
-        }
+        if (!matches) return;
 
         matches.forEach(t => {
-          el.innerText = el.innerText.replace(t, '');
+          if (isException(text, t)) return;
+
+          el.innerHTML = el.innerHTML.replace(t, '');
         });
       });
     });
