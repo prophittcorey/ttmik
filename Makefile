@@ -7,6 +7,7 @@ clean:
 # Copy's the main extension content to the build directory.
 copy:
 	@mkdir -p build
+	@cp -r assets/ build/assets
 	@cp -r js/ build/js
 
 # This is a build for manifest version 2.
