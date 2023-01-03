@@ -3,9 +3,12 @@
 This is a browser plugin that improves the TTMIK (talktomeinkorean.com)
 website.
 
-At this time the following improvements are made:
+A common complaint for TTMIK users is the use of romanization within the early
+levels (1 through 3). This extension's primary goal was to remove the
+romanization from levels 1, 2 and 3.
 
-1. Hangeul romanization is removed from lesson content.
+At this time no additional improvements are made, but may be added if the
+community deems them necessary.
 
 ## License
 
