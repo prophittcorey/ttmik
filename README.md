@@ -1,6 +1,7 @@
 # TTMIK
 
-This is a browser plugin that improves the TTMIK (talktomeinkorean.com)
+This is a browser plugin that improves the TTMIK
+([talktomeinkorean.com](https://talktomeinkorean.com))
 website.
 
 A common complaint for TTMIK users is the use of romanization within the early
