@@ -1,5 +1,7 @@
 # TTMIK
 
+![TTMIK Improved removing romanization from a lesson.](https://github.com/prophittcorey/ttmik/blob/master/.github/screenshot.png?raw=true)
+
 This is a browser plugin that improves the TTMIK
 ([talktomeinkorean.com](https://talktomeinkorean.com))
 website.
@@ -10,6 +12,8 @@ romanization from levels 1, 2 and 3.
 
 At this time no additional improvements are made, but may be added if the
 community deems them necessary.
+
+## Install
 
 Currently available for:
 
