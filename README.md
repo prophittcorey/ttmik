@@ -4,6 +4,9 @@ This is a browser plugin that improves the TTMIK
 ([talktomeinkorean.com](https://talktomeinkorean.com))
 website.
 
+- [Google Chrome](https://chrome.google.com/webstore/detail/talk-to-me-in-korean-impr/kopdaeamjkblpjkaojekdgplddicckba)
+- [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/talk-to-me-in-korean-improved/)
+
 A common complaint for TTMIK users is the use of romanization within the early
 levels (1 through 3). This extension's primary goal was to remove the
 romanization from levels 1, 2 and 3.
